@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dazzling Animals</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="./img/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <link rel="apple-touch-icon" href="./img/favicon.ico">
+
+  <meta name="description" content="Dazzling Animals — Generation 1 Heroes. 'Sunglasses' allow them to face their brilliance." />
+  <link rel="canonical" href="https://dazzlinganimals.netlify.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dazzlinganimals.netlify.app/" />
+  <meta property="og:title" content="Dazzling Animals" />
+  <meta property="og:description" content="Dazzling Animals — Generation 1 Heroes. 'Sunglasses' allow them to face their brilliance." />
+  <meta property="og:image" content="https://dazzlinganimals.netlify.app/img/og.png" />
+  <meta property="og:site_name" content="Dazzling Animals" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dazzling Animals" />
+  <meta name="twitter:description" content="Dazzling Animals — Generation 1 Heroes. 'Sunglasses' allow them to face their brilliance." />
+  <meta name="twitter:image" content="https://dazzlinganimals.netlify.app/img/og.png" />
+
+</head>
+
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__top"></div>
+    <div class="ambient__bottom"></div>
+  </div>
+
+  <nav id="nav" class="nav">
+    <div class="container nav__inner">
+      <div class="brand" role="button" tabindex="0" aria-label="Home">
+        <a href="#"><span class="brand__mark">DZL</span></a>
+      </div>
+
+      <div class="nav__links" aria-label="Primary">
+        <a href="#mint" class="nav__link">MINT</a>
+        <a href="#story" class="nav__link">Story</a>
+        <a href="#collection" class="nav__link">Collection</a>
+        <a href="#roadmap" class="nav__link">Roadmap</a>
+
+        <div id="walletDesktop" class="wallet-slot">
+          <button id="connectBtn" class="nav__walletBtn" type="button">
+            <span class="nav__walletBtnIcon" aria-hidden="true">
+              <i data-lucide="wallet"></i>
+            </span>
+            <span class="nav__walletBtnText">Connect Wallet</span>
+          </button>
+
+          <div class="nav__walletInfo" aria-label="Wallet status">
+            <span id="networkLabel" class="nav__walletMeta"></span>
+            <span id="walletLabel" class="nav__walletMeta">Not connected</span>
+            <span id="balanceLabel" class="nav__walletMeta"></span>
+          </div>
+        </div>
+      </div>
+
+      <button id="mobileMenuBtn" class="hamburger-btn nav__mobileBtn" type="button">
+        <span class="hamburger-icon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="mobileMenu hidden" aria-label="Mobile menu">
+      <div class="container mobileMenu__inner">
+        <a href="#mint" class="nav__link">MINT</a>
+        <a href="#story" class="mobileMenu__link">Story</a>
+        <a href="#collection" class="mobileMenu__link">Collection</a>
+        <a href="#roadmap" class="mobileMenu__link">Roadmap</a>
+
+        <div id="walletMobileSection" class="mobileMenu__walletSection">
+          <button id="walletMobileBtn" class="mobileMenu__walletBtn" type="button">
+            <span class="mobileMenu__walletIcon">
+              <i data-lucide="wallet"></i>
+            </span>
+            <span class="mobileMenu__walletText">Connect Wallet</span>
+          </button>
+
+          <!-- 연결 후 표시될 정보 -->
+          <div id="walletMobileInfo" class="mobileMenu__walletInfo hidden">
+            <div class="mobileMenu__walletAddress" id="walletMobileAddress"></div>
+            <div class="mobileMenu__walletBalance" id="walletMobileBalance"></div>
+            <div class="mobileMenu__walletActions">
+              <button id="copyMobileBtn" class="mobileMenu__actionBtn" type="button">
+                <i data-lucide="copy"></i>
+                <span>Copy Address</span>
+              </button>
+              <button id="disconnectMobileBtn" class="mobileMenu__actionBtn mobileMenu__actionBtn--danger"
+                type="button">
+                <i data-lucide="log-out"></i>
+                <span>Disconnect</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero__inner">
+      <div class="badge animate-fade-in-up" style="--delay:0s">
+        <i data-lucide="sparkles" class="ico ico--sparkle"></i>
+        <span>Generation 1 Heroes</span>
+      </div>
+
+      <div class="hero__titleWrap animate-fade-in-up" style="--delay:.05s">
+        <h1 class="hero__title">DAZZLING<br />ANIMALS</h1>
+      </div>
+
+      <p class="hero__desc animate-fade-in-up" style="--delay:.1s">
+        <span class="hero__descStrong">"Sunglasses"</span> allow them to face their brilliance.<br />
+        <span id="heroDescSmall" class="hero__descSmall"></span>
+      </p>
+
+      <div class="stack animate-fade-in-up" style="--delay:.15s">
+        <section class="slider">
+          <div id="sliderViewport" class="slider__viewport" aria-label="Animals slider">
+            <div id="sliderTrack" class="slider__track"></div>
+            <div id="sliderDots" class="slider__dots" aria-label="Slider dots"></div>
+          </div>
+        </section>
+
+        <div class="paletteWrap" id="mint">
+          <div id="paletteStrip" class="palette" aria-label="Color palette strip"></div>
+          <p class="paletteNote">* Background color will be random from above</p>
+        </div>
+
+        <section class="mint">
+          <div class="mint__card">
+            <div class="mint__tabs" role="tablist" aria-label="Mint phase">
+              <button id="tabWhitelist" class="mint__tab" role="tab" type="button">
+                <i data-lucide="lock" class="ico"></i>
+                WHITELIST
+              </button>
+              <button id="tabPublic" class="mint__tab mint__tab--active" role="tab" type="button">
+                <i data-lucide="globe" class="ico"></i>
+                PUBLIC
+              </button>
+            </div>
+
+            <div class="mint__header">
+              <div class="mint__headerLeft">
+                <h3 id="mintPhaseTitle" class="mint__phaseTitle">Loading...</h3>
+                <div class="mint__live">
+                  <span id="liveStatusDot" class="dot dot--closed"></span>
+                  <span id="liveStatusText">Loading</span>
+                </div>
+              </div>
+              <div class="mint__headerRight">
+                <div class="mint__label">Price</div>
+                <div id="mintPrice" class="mint__price">
+                  <span id="priceLabel">...</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mint__progress">
+              <div class="mint__progressTop">
+                <span>Total Minted</span>
+                <span id="totalMintedLabel">Loading...</span>
+              </div>
+              <div class="mint__bar">
+                <div id="mintProgressBar" class="mint__barFill" style="width:0%"></div>
+              </div>
+            </div>
+
+            <div class="mint__progress">
+              <div class="mint__progressTop">
+                <span id="roundProgressTitle">Round Minted</span>
+                <span id="roundMintedLabel">Loading...</span>
+              </div>
+              <div class="mint__bar">
+                <div id="roundProgressBar" class="mint__barFill" style="width:0%"></div>
+              </div>
+            </div>
+
+            <div id="mintStatusBox"></div>
+
+            <div class="mint__controls">
+              <div class="mint__counter" aria-label="Mint amount">
+                <button id="mintMinus" class="icon-btn" type="button" disabled>
+                  <h1>-</h1>
+                </button>
+                <div id="mintAmount" class="mint__amount">1</div>
+                <button id="mintPlus" class="icon-btn" type="button" disabled>
+                  <h1>+</h1>
+                </button>
+              </div>
+
+              <div class="mint__totalRow">
+                <span class="mint__totalLabel">Total Cost</span>
+                <span id="totalCostLabel" class="mint__totalValue">...</span>
+              </div>
+
+              <button id="mintBtn" class="mint__mintBtn" type="button"
+                style="opacity:1;cursor:pointer;background:#667eea;" disabled>
+                <span style="display:flex;align-items:center;justify-content:center;gap:8px;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                  </svg>
+                  Connect Wallet
+                </span>
+              </button>
+            </div>
+
+            <p id="mintFootnote" class="mint__footnote">Connect wallet to load mint data</p>
+          </div>
+        </section>
+      </div>
+
+      <div class="hero__cta animate-fade-in-up" style="--delay:.25s">
+        <a href="https://opensea.io/" target="_blank" class="btn btn--ghost">View Collection</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="story" class="section section--white">
+    <div class="container story">
+      <div class="story__left">
+        <div class="story__heading">
+          <h2 class="h2">FACE YOUR LIGHT</h2>
+          <div class="story__underline"></div>
+        </div>
+        <div id="introText" class="story__text"></div>
+      </div>
+
+      <div class="story__right">
+        <div class="glass">
+          <div class="glass__pulse" aria-hidden="true"></div>
+          <div class="glass__inner">
+            <div class="glass__iconWrap">
+              <div class="glass__iconGlow" aria-hidden="true"></div>
+            </div>
+            <img src="./img/ALL.png" alt="All Guardians" class="glass__allImg" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="collection" class="section section--gray">
+    <div class="container">
+      <div class="collectionHead">
+        <div>
+          <div class="kicker">The 12 Guardians</div>
+          <h2 class="h2 h2--tight">ZODIAC HEROES</h2>
+        </div>
+        <p class="collectionHead__note">
+          Limited release of 122 each month.<br />
+          Modern guardians reborn to protect your peace.
+        </p>
+      </div>
+
+      <div id="collectionGrid" class="grid" aria-label="Collection grid"></div>
+    </div>
+  </section>
+
+  <section id="roadmap" class="section section--white">
+    <div class="container">
+      <div class="roadHead">
+        <h2 class="h2 roadHead__title">RELEASE PLAN</h2>
+        <p class="roadHead__sub">Each month brings a new guardian</p>
+      </div>
+
+      <div class="roadGrid">
+        <div class="roadCard">
+          <div class="roadIcon">
+            <i data-lucide="star"></i>
+          </div>
+          <h3 class="roadCard__title">LIMITED EDITION</h3>
+          <p class="roadCard__desc">122 NFTs each month. Rare digital art to complete your collection.</p>
+        </div>
+
+        <div class="roadCard">
+          <div class="roadIcon">
+            <i data-lucide="moon"></i>
+          </div>
+          <h3 class="roadCard__title">MODERN GUARDIANS</h3>
+          <p class="roadCard__desc">Traditional Zodiacs reinterpreted as protectors of inner peace.</p>
+        </div>
+
+        <div class="roadCard">
+          <div class="roadIcon">
+            <i data-lucide="sun"></i>
+          </div>
+          <h3 class="roadCard__title">MONTHLY REVEAL</h3>
+          <p class="roadCard__desc">Two weeks before release, the hero's story and image are unveiled.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__brand">DZL</div>
+        <p class="footer__copy">© 2026 Dazzling Animals. All rights reserved.</p>
+      </div>
+      <div class="footer__links">
+        <a href="https://x.com/Da12an_nft" target="_blank" class="footer__link">X</a>
+        <a href="https://discord.com/invite/pQ837zuHzZ" target="_blank" class="footer__link">DISCORD</a>
+        <a href="https://opensea.io" target="_blank" class="footer__link">OPENSEA</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Animal details">
+    <div id="modalOverlay" class="modal__overlay" aria-hidden="true"></div>
+    <div class="modal__panel" role="document">
+      <button id="modalClose" class="modal__close" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal__content">
+        <div id="modalMedia" class="modal__media">
+          <div class="modal__mediaShade"></div>
+          <div class="modal__mediaCenter">
+            <img id="modalMediaImg" class="modal__mediaIcon" src="./img/Ox.png" alt="Ox" loading="lazy"
+              decoding="async" />
+          </div>
+        </div>
+
+        <div class="modal__body">
+          <div class="modal__top">
+            <div>
+              <h3 id="modalName" class="modal__name">Ox</h3>
+              <p id="modalSub" class="modal__sub">Zodiac: Ox</p>
+            </div>
+            <div class="modal__meta">
+              <span id="modalMonth" class="pill">MONTH 01</span>
+              <span id="modalTheme" class="pill pill--soft">Theme</span>
+            </div>
+          </div>
+
+          <div class="modal__section">
+            <div class="modal__label">Title</div>
+            <div id="modalTitle" class="modal__textStrong"></div>
+          </div>
+
+          <div class="modal__section">
+            <div class="modal__label">Meaning</div>
+            <p id="modalMeaning" class="modal__text"></p>
+          </div>
+
+          <div class="modal__section">
+            <div class="modal__label">Story</div>
+            <p id="modalStory" class="modal__text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <pre id="logBox" hidden></pre>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+  
+
+  <script type="module" src="./app.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
