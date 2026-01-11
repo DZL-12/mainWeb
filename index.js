@@ -18,7 +18,7 @@ const ANIMALS_DATA = [
   {
     month: 1,
     name: "Ox",
-    imageFile: "Ox.png",
+    imageFile: "Ox.webp",
     subName: "Zodiac: Ox",
     title: "Unchanging Value",
     color: "#CA5E59",
@@ -31,7 +31,7 @@ const ANIMALS_DATA = [
   {
     month: 2,
     name: "Lion",
-    imageFile: "Lion.png",
+    imageFile: "Lion.webp",
     subName: "Zodiac: Lion",
     title: "The Value of Existence",
     color: "#1a1717ff",
@@ -45,7 +45,7 @@ const ANIMALS_DATA = [
   {
     month: 3,
     name: "Rabbit",
-    imageFile: "Rabbit.png",
+    imageFile: "Rabbit.webp",
     subName: "Zodiac: Rabbit",
     title: "The Fortune of Sensitivity",
     color: "#EBEBEB",
@@ -59,7 +59,7 @@ const ANIMALS_DATA = [
   {
     month: 4,
     name: "Chameleon",
-    imageFile: "Chameleon.png",
+    imageFile: "Chameleon.webp",
     subName: "Zodiac: Chameleon",
     title: "Courage to Love Myself",
     color: "#1D649A",
@@ -72,7 +72,7 @@ const ANIMALS_DATA = [
   {
     month: 5,
     name: "Snake",
-    imageFile: "Snake.png",
+    imageFile: "Snake.webp",
     subName: "Zodiac: Snake",
     title: "A Better Me",
     color: "#39A14F",
@@ -85,7 +85,7 @@ const ANIMALS_DATA = [
   {
     month: 6,
     name: "Camel",
-    imageFile: "Camel.png",
+    imageFile: "Camel.webp",
     subName: "Zodiac: Camel",
     title: "The Power of the Back",
     color: "#F7C93C",
@@ -98,7 +98,7 @@ const ANIMALS_DATA = [
   {
     month: 7,
     name: "Goat",
-    imageFile: "Goat.png",
+    imageFile: "Goat.webp",
     subName: "Zodiac: Goat",
     title: "The Purest Inner Self",
     color: "#E03D40",
@@ -111,7 +111,7 @@ const ANIMALS_DATA = [
   {
     month: 8,
     name: "Monkey",
-    imageFile: "Monkey.png",
+    imageFile: "Monkey.webp",
     subName: "Zodiac: Monkey",
     title: "Humor That Brings Hope",
     color: "#FFD700",
@@ -124,7 +124,7 @@ const ANIMALS_DATA = [
   {
     month: 9,
     name: "Giraffe",
-    imageFile: "Giraffe.png",
+    imageFile: "Giraffe.webp",
     subName: "Zodiac: Giraffe",
     title: "Happiness Nearby",
     color: "#EBBC6B",
@@ -137,7 +137,7 @@ const ANIMALS_DATA = [
   {
     month: 10,
     name: "Polar Bear",
-    imageFile: "PolarBear.png",
+    imageFile: "PolarBear.webp",
     subName: "Zodiac: Polar Bear",
     title: "Hope Blooming Anywhere",
     color: "#EB5B7D",
@@ -150,7 +150,7 @@ const ANIMALS_DATA = [
   {
     month: 11,
     name: "Sloth",
-    imageFile: "Sloth.png",
+    imageFile: "Sloth.webp",
     subName: "Zodiac: Sloth",
     title: "My Own Pace",
     color: "#89236A",
@@ -163,7 +163,7 @@ const ANIMALS_DATA = [
   {
     month: 12,
     name: "Fox",
-    imageFile: "Fox.png",
+    imageFile: "Fox.webp",
     subName: "Zodiac: Fox",
     title: "The One Who Believes in Me",
     color: "#469EDE",
@@ -360,7 +360,7 @@ function buildSlider() {
 
     const img = document.createElement("img");
     img.className = "sliderCard__icon"; // reuse sizing styles
-    img.src = `./img/${animal.imageFile || animal.name.replace(/\s+/g, "") + ".png"}`;
+    img.src = `./img/${animal.imageFile || animal.name.replace(/\s+/g, "") + ".webp"}`;
     img.alt = animal.name;
     img.loading = "lazy";
     img.decoding = "async";
@@ -492,7 +492,7 @@ function buildCollection() {
 
     const img = document.createElement("img");
     img.className = "card__img";
-    img.src = `./img/${animal.imageFile || animal.name.replace(/\s+/g, "") + ".png"}`;
+    img.src = `./img/${animal.imageFile || animal.name.replace(/\s+/g, "") + ".webp"}`;
     img.alt = `${animal.name} artwork`;
     img.loading = "lazy";
     img.decoding = "async";
@@ -572,7 +572,7 @@ function openModal(animal) {
   modalMedia.style.backgroundColor = animal.color;
 
   if (modalMediaImg) {
-    modalMediaImg.src = `./img/${animal.imageFile || animal.name.replace(/\s+/g, "") + ".png"}`;
+    modalMediaImg.src = `./img/${animal.imageFile || animal.name.replace(/\s+/g, "") + ".webp"}`;
     modalMediaImg.alt = animal.name;
   }
 
