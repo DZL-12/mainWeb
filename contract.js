@@ -5,7 +5,7 @@ export const NETWORK = 11155111;
 
 export const CONTRACT_ADDRESSES = {
   1: "0x0000000000000000000000000000000000000000",
-  11155111: "0xE34Fb78F5bDB64f025dbb7a0B64302891fb8888E",
+  11155111: "0x56f2573f065AC9Dc48a958A038b8598D57F27221",
 };
 
 export const CONTRACT_ADDRESS = CONTRACT_ADDRESSES[NETWORK];
@@ -2230,4 +2230,5 @@ export function normalizeEvmError(err) {
     return msg.replace("execution reverted:", "Reverted:");
   }
   return msg;
+
 }
