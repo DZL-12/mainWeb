@@ -22,7 +22,6 @@ const ANIMALS_DATA = [
     subName: "Zodiac: Ox",
     title: "Unchanging Value",
     color: "#CA5E59",
-    theme: "Clearing the Past",
     meaning:
       "When you feel empty from the unchanging, lonely reality of the new year, this NFT offers comfort by reminding you that your consistent daily life is the most precious and solid value that brings luck and fortune.",
     story:
@@ -36,7 +35,6 @@ const ANIMALS_DATA = [
     title: "The Value of Existence",
     color: "#1a1717ff",
     textColor: "text-white",
-    theme: "Dynamic Energy",
     meaning:
       "To you, exhausted from trying to meet the world's standards, this NFT deeply comforts you by saying you don't need to achieve or prove anything—just being your living, breathing self is already perfect and dazzlingly precious.",
     story:
@@ -50,7 +48,6 @@ const ANIMALS_DATA = [
     title: "The Fortune of Sensitivity",
     color: "#EBEBEB",
     textColor: "text-black",
-    theme: "Pure Vitality",
     meaning:
       "To you, worn out by the world's anxiety and noise, this NFT offers comfort by showing that your sensitivity is actually a superpower that helps you find the greatest luck.",
     story:
@@ -63,7 +60,6 @@ const ANIMALS_DATA = [
     subName: "Zodiac: Chameleon",
     title: "Courage to Love Myself",
     color: "#1D649A",
-    theme: "Clear Skies",
     meaning:
       "To you, who wears masks to fit the world's demands, this NFT tells you that you are a complete being embracing all those colors, giving you the courage to choose your own light at any time.",
     story:
@@ -76,7 +72,6 @@ const ANIMALS_DATA = [
     subName: "Zodiac: Snake",
     title: "A Better Me",
     color: "#39A14F",
-    theme: "Abundance",
     meaning:
       "When you are exhausted by the pain and burden of growth, this NFT comforts you by reminding you that all your suffering is an essential process to shed your old self and be reborn as a better being.",
     story:
@@ -89,7 +84,6 @@ const ANIMALS_DATA = [
     subName: "Zodiac: Camel",
     title: "The Power of the Back",
     color: "#F7C93C",
-    theme: "The Center",
     meaning:
       "When you feel like you're walking alone with a heavy burden, this NFT comforts you by reminding you that your silent effort is actually the 'clearest milestone' showing the way for others.",
     story:
@@ -102,7 +96,6 @@ const ANIMALS_DATA = [
     subName: "Zodiac: Goat",
     title: "The Purest Inner Self",
     color: "#E03D40",
-    theme: "Overcoming Negativity",
     meaning:
       "Even if you feel you don't fit in with the world, this NFT comforts you by reminding you that within you lies the purest and most beautiful light, and you are a good person just as you are.",
     story:
@@ -115,7 +108,6 @@ const ANIMALS_DATA = [
     subName: "Zodiac: Monkey",
     title: "Humor That Brings Hope",
     color: "#FFD700",
-    theme: "Harvest",
     meaning:
       "This NFT helps you realize that your very existence is the purest comfort and 'hope that keeps life going' for someone else.",
     story:
@@ -128,7 +120,6 @@ const ANIMALS_DATA = [
     subName: "Zodiac: Giraffe",
     title: "Happiness Nearby",
     color: "#EBBC6B",
-    theme: "Maturity",
     meaning:
       "To you, who always looked at things far away, this NFT comforts you by reminding you not to miss the happiness right next to you.",
     story:
@@ -141,7 +132,6 @@ const ANIMALS_DATA = [
     subName: "Zodiac: Polar Bear",
     title: "Hope Blooming Anywhere",
     color: "#EB5B7D",
-    theme: "Happiness",
     meaning:
       "To you, feeling anxious in a changing world, this NFT shows that every footstep you take is a path of hope and that adaptation is the greatest courage.",
     story:
@@ -154,7 +144,6 @@ const ANIMALS_DATA = [
     subName: "Zodiac: Sloth",
     title: "My Own Pace",
     color: "#89236A",
-    theme: "Reflection",
     meaning:
       "To you, tired of the world's fast pace, this NFT gifts you time to stop and look back at yourself, helping you reflect on your noble inner values.",
     story:
@@ -167,7 +156,6 @@ const ANIMALS_DATA = [
     subName: "Zodiac: Fox",
     title: "The One Who Believes in Me",
     color: "#469EDE",
-    theme: "Wisdom",
     meaning:
       "Even when the world feels full of doubt and lies, this NFT comforts you by reminding you to lay down your anxiety for a moment because there is someone who purely believes in and loves you.",
     story:
@@ -219,7 +207,6 @@ const modalMediaImg = $("modalMediaImg");
 const modalName = $("modalName");
 const modalSub = $("modalSub");
 const modalMonth = $("modalMonth");
-const modalTheme = $("modalTheme");
 const modalTitle = $("modalTitle");
 const modalMeaning = $("modalMeaning");
 const modalStory = $("modalStory");
@@ -563,7 +550,6 @@ function openModal(animal) {
   modalName.textContent = animal.name;
   modalSub.textContent = animal.subName;
   modalMonth.textContent = `MONTH ${String(animal.month).padStart(2, "0")}`;
-  modalTheme.textContent = `THEME: ${animal.theme || "-"}`;
 
   modalTitle.textContent = animal.title;
   modalMeaning.textContent = animal.meaning;
