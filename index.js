@@ -87,7 +87,7 @@ const ANIMALS_DATA = [
     meaning:
       "When you feel like you're walking alone with a heavy burden, this NFT comforts you by reminding you that your silent effort is actually the 'clearest milestone' showing the way for others.",
     story:
-      "The Camel was trapped in the prejudice of being a mere 'burden carrier,' silently hauling loads across the endless desert. In June, past the year's midpoint and exhausted by the weary journey, he felt his efforts were meaningless and began to lose his center, yet he persisted with painful steps. One day, after completing his most agonizing crossing, lost merchants approached him at an oasis, showing a worn map. 'We were lost,' they said, 'but by following your steadfast footprints, we kept our hope and made it here.' At that moment, the Camel realized his painful steps were actually a **'milestone of hope' guiding those who had fallen into despair.** Blinded by the light of this realization, we gifted him sunglasses. Now, through sunglasses that remain unshaken in endless adversity, the Camel is reborn as a complete hero, steadfastly moving forward carrying the hope of all.",
+      "The Camel was trapped in the prejudice of being a mere 'burden carrier,' silently hauling loads across the endless desert. In June, past the year's midpoint and exhausted by the weary journey, he felt his efforts were meaningless and began to lose his center, yet he persisted with painful steps. One day, after completing his most agonizing crossing, lost merchants approached him at an oasis, showing a worn map. 'We were lost,' they said, 'but by following your steadfast footprints, we kept our hope and made it here.' At that moment, the Camel realized his painful steps were actually a 'milestone of hope' guiding those who had fallen into despair. Blinded by the light of this realization, we gifted him sunglasses. Now, through sunglasses that remain unshaken in endless adversity, the Camel is reborn as a complete hero, steadfastly moving forward carrying the hope of all.",
   },
   {
     month: 7,
@@ -111,7 +111,7 @@ const ANIMALS_DATA = [
     meaning:
       "This NFT helps you realize that your very existence is the purest comfort and 'hope that keeps life going' for someone else.",
     story:
-      "The Monkey was trapped in the prejudice of being a 'caricature for ridicule,' a mere tool for stress relief in the zoo. In August, as the season of fruition approached, he fell deep into anxiety about the worth of his achievements and the loneliness of being just a source of amusement. One day, he picked up an old camera dropped by a visitor. Curious, he pressed the play button and saw images of people laughing brightly at him. In their laughter, he saw deep fatigue and the weariness of life. He realized that their laughter was not ridicule, but **the purest 'hope for survival,' a moment to forget despair and gain the strength to live on.** He understood that his antics provided the energy needed to sustain someone's life. Blinded by the light of this realization, we gifted him sunglasses. Now, through sunglasses that capture true humor rather than prejudice, the Monkey has become a hero who discovers the value of hope in his own existence.",
+      "The Monkey was trapped in the prejudice of being a 'caricature for ridicule,' a mere tool for stress relief in the zoo. In August, as the season of fruition approached, he fell deep into anxiety about the worth of his achievements and the loneliness of being just a source of amusement. One day, he picked up an old camera dropped by a visitor. Curious, he pressed the play button and saw images of people laughing brightly at him. In their laughter, he saw deep fatigue and the weariness of life. He realized that their laughter was not ridicule, but the purest 'hope for survival,' a moment to forget despair and gain the strength to live on. He understood that his antics provided the energy needed to sustain someone's life. Blinded by the light of this realization, we gifted him sunglasses. Now, through sunglasses that capture true humor rather than prejudice, the Monkey has become a hero who discovers the value of hope in his own existence.",
   },
   {
     month: 9,
@@ -643,3 +643,4 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
